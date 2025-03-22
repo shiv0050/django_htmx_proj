@@ -1,0 +1,16 @@
+<tr>
+    <td>{{ contact.name }}</td>
+    <td>{{ contact.email }}</td>
+    <td>{{ contact.created_at }}</td>
+    <td>
+        {% if contact.document %}
+        <a href="{{ contact.document.url }}" class="btn btn-ghost btn-xs" target="_blank">Download</a>
+        {% else %}
+        <span class="text-red-500">No document</span>
+        {% endif %}
+
+    <td>
+        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+    </td>
+</tr>

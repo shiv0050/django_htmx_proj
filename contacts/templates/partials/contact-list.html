@@ -1,0 +1,24 @@
+<div id="contacts-list">
+    {% if contacts %}
+    <div>
+        <table class="table table-zebra">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
+                    <th>Document</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="contact-table-body">
+                {% for contact in contacts %}
+                    {% include 'partials/contact-row.html' %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="alert alert-info">No contacts found.</div>
+    {% endif %}
+</div>
